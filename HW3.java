@@ -19,7 +19,7 @@ public class HW3 {
 		//shuffle (10 points)
 		//constructor (5 points)
 		Deck deck=new Deck(nDeck);
-		deck.printDeck();
+		//deck.printDeck();
 		//TODO: please check your output, make sure that you print newCard and newCard2 on your screen  (10 points)
 		//TODO: please add new fields and methods to Card class (25)
 		//Use enumerated type in Card (10 points)

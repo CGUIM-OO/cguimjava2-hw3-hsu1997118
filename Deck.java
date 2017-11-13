@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Deck{
-	private ArrayList<Card> cards;
+	private ArrayList<Card> cards; 
 
 	ArrayList<Card> usedCard = new ArrayList<>();
-	public int nUsed;	
+	public int nUsed; 
 	//TODO: Please implement the constructor (30 points)
 	public Deck(int nDeck){
 		cards=new ArrayList<Card>();
@@ -24,8 +24,7 @@ public class Deck{
 			}
 		}
 
-		//--1. call shuffle (你們描述規定的)
-		shuffle();
+		shuffle(); //call shuffle 
 					
 	}	
 	//TODO: Please implement the method to print all cards on screen (10 points)
@@ -44,10 +43,10 @@ public class Deck{
 		//--檢查排發完沒
 		if (nUsed == 52)
 			shuffle();
-		nUsed+=1;
-		usedCard.add(cards.get(nUsed-1));
+		nUsed+=1; //使用過的牌數
+		usedCard.add(cards.get(nUsed-1));  //將以抽出的牌放入usedCard ArrayList裡面
 
-		return cards.get(nUsed-1);
+		return cards.get(nUsed-1); //回傳抽到了哪張牌
 	}
 
 	public void shuffle() {
@@ -58,7 +57,10 @@ public class Deck{
 		    Card card = cards.get(i);
 		    cards.set(i, cards.get(j));
 		    cards.set(j, card);
+		//用Fisher-Yates shuffle algorithm
 		}
+		
+		//要重設usedCard跟nUsed
 		usedCard.clear();
 		nUsed = 0;
 	}

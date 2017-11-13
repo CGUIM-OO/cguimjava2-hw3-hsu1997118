@@ -1,5 +1,5 @@
 public class Card{
-	enum Suit {Club,Diamond,Heart,Spade};
+	enum Suit {Club,Diamond,Heart,Spade}; //用列舉的方法來定花色
 	private Suit suit; //Definition: 1~4, Clubs=1, Diamonds=2, Hearts=3, Spades=4
 	private int rank; //1~13
 	/**
